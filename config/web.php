@@ -7,9 +7,11 @@ $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+    'language' => 'ru-RU',
+    'charset' => 'UTF-8',
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
-        '@npm'   => '@vendor/npm-asset',
+        '@npm' => '@vendor/npm-asset',
     ],
     'components' => [
         'request' => [
@@ -37,9 +39,9 @@ $config = [
             'enableStrictParsing' => true,
             'showScriptName' => false,
             'rules' => [
-                'GET '=>'site/index',
-                'GET buildings-list'=>'site/buildings-list',
-                'GET hierarchical-list'=>'site/hierarchical-list',
+                'GET ' => 'site/index',
+                'GET buildings-list' => 'site/buildings-list',
+                'GET hierarchical-list' => 'site/hierarchical-list',
             ],
         ],
     ],
