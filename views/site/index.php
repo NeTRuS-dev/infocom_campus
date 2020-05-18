@@ -8,7 +8,7 @@ use yii\grid\GridView;
 /* @var $data_provider yii\data\BaseDataProvider */
 /* @var $item_view_name yii\web\View */
 
-$this->title = 'Campus';
+$this->title = 'Кампус';
 ?>
 <div class="d-flex justify-content-center align-items-center w-100 pt-5 pb-5">
     <?php echo GridView::widget([

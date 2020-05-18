@@ -29,13 +29,26 @@ AppAsset::register($this);
     NavBar::begin(['brandLabel' => 'Кампус']);
     echo Nav::widget([
         'items' => [
-            ['label' => 'Список лекционных аудиторий', 'url' => ['/']],
-            ['label' => 'Список корпусов университета', 'url' => ['/buildings-list']],
-            ['label' => 'Иерархический список корпусов', 'url' => ['/hierarchical-list']],
+            [
+                'label' => 'Сущности',
+                'items' => [
+                    ['label' => 'Здания', 'url' => '/building'],
+                    ['label' => 'Подразделения', 'url' => '/subdivision'],
+                    ['label' => 'Аудитории', 'url' => '/audience'],
+                ],
+            ],
+            [
+                'label' => 'Представления',
+                'items' => [
+                    ['label' => 'Список лекционных аудиторий', 'url' => ['/']],
+                    ['label' => 'Список корпусов университета', 'url' => ['/buildings-list']],
+                    ['label' => 'Иерархический список корпусов', 'url' => ['/hierarchical-list']],
+                ],
+            ],
         ],
-        'options' => ['class' => 'navbar-nav ml-lg-auto flex-lg-nowrap pr-lg-5 justify-content-lg-between'],
+        'options' => ['class' => 'navbar-nav ml-lg-auto w-50 flex-lg-nowrap pr-lg-5 justify-content-lg-between'],
     ]);
-    NavBar::end();?>
+    NavBar::end(); ?>
 </header>
 <div class="wrap">
     <?= $content ?>

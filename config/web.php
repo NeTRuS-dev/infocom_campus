@@ -36,17 +36,17 @@ $config = [
         'db' => $db,
         'urlManager' => [
             'enablePrettyUrl' => true,
-            'enableStrictParsing' => true,
+//            'enableStrictParsing' => true,
             'showScriptName' => false,
             'rules' => [
                 'GET ' => 'site/index',
                 'GET buildings-list' => 'site/buildings-list',
                 'GET hierarchical-list' => 'site/hierarchical-list',
-                [
-                    'pattern' => '<controller:[\w\-]+>/<action:[\w\-]+>',
-                    'route' => '<controller>/<action>',
-                    'defaults' => ['action' => 'index'],
-                ],
+//                [
+//                    'pattern' => '<controller:[\w\-]+>/<action:[\w\-]+>',
+//                    'route' => '<controller>/<action>',
+//                    'defaults' => ['action' => 'index'],
+//                ],
             ],
         ],
     ],
