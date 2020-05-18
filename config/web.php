@@ -42,6 +42,11 @@ $config = [
                 'GET ' => 'site/index',
                 'GET buildings-list' => 'site/buildings-list',
                 'GET hierarchical-list' => 'site/hierarchical-list',
+                [
+                    'pattern' => '<controller:[\w\-]+>/<action:[\w\-]+>',
+                    'route' => '<controller>/<action>',
+                    'defaults' => ['action' => 'index'],
+                ],
             ],
         ],
     ],
