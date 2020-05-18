@@ -11,7 +11,7 @@ INNER JOIN audience_type ON audience.audience_type_id=audience_type.id
 GROUP BY building.name;
 
 -- 
-SELECT building.name AS `Название корпуса`,subdivision.name AS `Название подразделения`, audience.audience_number AS `Номер аудитории` FROM building 
+SELECT building.name AS `Название корпуса`,IFNULL(subdivision.name, "Не закреплено") AS `Название подразделения`, IFNULL(audience.audience_number, "Не закреплена") AS `Номер аудитории` FROM building
 LEFT JOIN subdivision ON building.id=subdivision.building_id
 LEFT JOIN audience ON audience.subdivision_id=subdivision.id
 LEFT JOIN audience_type ON audience.audience_type_id=audience_type.id

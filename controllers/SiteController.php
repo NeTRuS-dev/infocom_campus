@@ -3,10 +3,9 @@
 namespace app\controllers;
 
 use Yii;
-use yii\filters\AccessControl;
+use yii\data\ArrayDataProvider;
 use yii\web\Controller;
 use yii\web\Response;
-use yii\filters\VerbFilter;
 
 
 class SiteController extends Controller
@@ -32,8 +31,19 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-
-        return $this->render('index');
+        $retrieved_data = [];
+        $view_name = '';
+        $provider = new ArrayDataProvider([
+            'allModels' => $retrieved_data,
+            'pagination' => [
+                'pageSize' => 10,
+            ],
+        ]);
+        return $this->render('index', [
+            'data_provider' => $provider,
+            'item_view_name' => $view_name
+        ]);
     }
+
 
 }

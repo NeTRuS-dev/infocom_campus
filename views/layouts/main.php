@@ -4,11 +4,9 @@
 
 /* @var $content string */
 
-use app\widgets\Alert;
+use yii\bootstrap4\Nav;
+use yii\bootstrap4\NavBar;
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 
 AppAsset::register($this);
@@ -26,7 +24,19 @@ AppAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
-
+<header>
+    <?php
+    NavBar::begin(['brandLabel' => 'Кампус']);
+    echo Nav::widget([
+        'items' => [
+            ['label' => 'Список лекционных аудиторий', 'url' => ['/']],
+            ['label' => 'Список корпусов университета', 'url' => ['/']],
+            ['label' => 'Иерархический список корпусов', 'url' => ['/']],
+        ],
+        'options' => ['class' => 'navbar-nav ml-lg-auto flex-lg-nowrap pr-lg-5 justify-content-lg-between'],
+    ]);
+    NavBar::end();?>
+</header>
 <div class="wrap">
     <?= $content ?>
 </div>
