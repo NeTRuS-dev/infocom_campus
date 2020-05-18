@@ -30,8 +30,8 @@ AppAsset::register($this);
     echo Nav::widget([
         'items' => [
             ['label' => 'Список лекционных аудиторий', 'url' => ['/']],
-            ['label' => 'Список корпусов университета', 'url' => ['/']],
-            ['label' => 'Иерархический список корпусов', 'url' => ['/']],
+            ['label' => 'Список корпусов университета', 'url' => ['/buildings-list']],
+            ['label' => 'Иерархический список корпусов', 'url' => ['/hierarchical-list']],
         ],
         'options' => ['class' => 'navbar-nav ml-lg-auto flex-lg-nowrap pr-lg-5 justify-content-lg-between'],
     ]);

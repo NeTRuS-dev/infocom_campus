@@ -34,8 +34,12 @@ $config = [
         'db' => $db,
         'urlManager' => [
             'enablePrettyUrl' => true,
+            'enableStrictParsing' => true,
             'showScriptName' => false,
             'rules' => [
+                'GET '=>'site/index',
+                'GET buildings-list'=>'site/buildings-list',
+                'GET hierarchical-list'=>'site/hierarchical-list',
             ],
         ],
     ],
