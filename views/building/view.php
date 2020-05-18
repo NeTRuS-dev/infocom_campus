@@ -13,18 +13,8 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="building-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1 class="text-center"><?= Html::encode($this->title) ?></h1>
 
-    <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
-            'class' => 'btn btn-danger',
-            'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
-                'method' => 'post',
-            ],
-        ]) ?>
-    </p>
 
     <?= DetailView::widget([
         'model' => $model,
@@ -33,5 +23,14 @@ $this->params['breadcrumbs'][] = $this->title;
             'name',
         ],
     ]) ?>
-
+    <div class="d-flex justify-content-center">
+        <?= Html::a('Изменить', ['update', 'id' => $model->id], ['class' => 'btn btn-primary m-3']) ?>
+        <?= Html::a('Удалить', ['delete', 'id' => $model->id], [
+            'class' => 'btn btn-danger m-3',
+            'data' => [
+                'confirm' => 'Вы уверены что хотите удалить это здание?',
+                'method' => 'post',
+            ],
+        ]) ?>
+    </div>
 </div>

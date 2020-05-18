@@ -12,10 +12,10 @@ $this->params['breadcrumbs'][] = 'Update';
 ?>
 <div class="building-update">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-
-    <?= $this->render('_form', [
-        'model' => $model,
-    ]) ?>
-
+    <h1 class="text-center"><?= Html::encode($this->title) ?></h1>
+    <div class="w-100 h-100 d-flex justify-content-center align-items-center">
+        <?= $this->render('_form', [
+            'model' => $model,
+        ]) ?>
+    </div>
 </div>

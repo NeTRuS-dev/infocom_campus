@@ -45,7 +45,7 @@ class Subdivision extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'name' => 'Название подразделения',
-            'building_id' => 'Building ID',
+            'building_id' => 'ID здания',
         ];
     }
 

@@ -55,8 +55,8 @@ class Audience extends \yii\db\ActiveRecord
             'audience_width' => 'Ширина помещения',
             'audience_length' => 'Длина помещения',
             'number_of_seats' => 'Количество посадочных мест',
-            'audience_type_id' => 'Audience Type ID',
-            'subdivision_id' => 'Subdivision ID',
+            'audience_type_id' => 'ID типа аудитории',
+            'subdivision_id' => 'ID подразделения',
         ];
     }
 
