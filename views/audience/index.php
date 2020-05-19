@@ -32,6 +32,9 @@ $this->params['breadcrumbs'][] = $this->title;
                 'audience_width',
                 'audience_length',
                 'number_of_seats',
+                [
+                    'attribute' => 'audienceType.name_of_type',
+                ],
 //            'audience_type_id',
 //            'subdivision_id',
 

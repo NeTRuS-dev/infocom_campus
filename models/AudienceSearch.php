@@ -40,7 +40,7 @@ class AudienceSearch extends Audience
      */
     public function search($params)
     {
-        $query = Audience::find();
+        $query = Audience::find()->with('audienceType');
 
         // add conditions that should always apply here
 
