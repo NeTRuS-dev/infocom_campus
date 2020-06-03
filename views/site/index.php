@@ -6,7 +6,6 @@ use yii\bootstrap4\LinkPager;
 use yii\grid\GridView;
 
 /* @var $data_provider yii\data\BaseDataProvider */
-/* @var $item_view_name yii\web\View */
 
 $this->title = 'Кампус';
 ?>
