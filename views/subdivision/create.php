@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Subdivision */
 
-$this->title = 'Create Subdivision';
+$this->title = 'Создать подразделение';
 $this->params['breadcrumbs'][] = ['label' => 'Subdivisions', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

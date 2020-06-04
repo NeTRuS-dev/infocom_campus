@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Audience */
 
-$this->title = 'Create Audience';
+$this->title = 'Создание аудитории';
 $this->params['breadcrumbs'][] = ['label' => 'Audiences', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
